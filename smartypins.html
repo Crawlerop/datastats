@@ -231,7 +231,7 @@
                                 if (foundAnswer.indexOf([i.answer.location.lat, i.answer.location.lng].join(",")) == -1) { 
                                     foundAnswer.push([i.answer.location.lat, i.answer.location.lng].join(","))
                                     assisturl = "https://crawlerop.github.io/psassist/js/getmaplace.html?lat="+i.answer.location.lat+"&lng="+i.answer.location.lng
-                                    let m = L.marker([i.answer.location.lat, i.answer.location.lng], {title: i.answer.title})
+                                    let m = L.circleMarker([i.answer.location.lat, i.answer.location.lng], {title: i.answer.title, color: '#3388ff'})
                                         
                                     m.on('click', function(e){
                                         mymap.setView([i.answer.location.lat, i.answer.location.lng], 19); 

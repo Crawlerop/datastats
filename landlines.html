@@ -234,7 +234,7 @@
                                 if (foundAnswer.indexOf(lldata[0]) == -1) { 
                                     foundAnswer.push(lldata[0])
                                     assisturl = "https://crawlerop.github.io/psassist/js/getmaplace.html?lat="+lat+"&lng="+lng
-                                    let m = L.marker([lat,lng], {title: place})
+                                    let m = L.circleMarker([lat,lng], {title: place, color: '#3388ff'})
                                         
                                     m.on('click', function(e){
                                         mymap.setView([lat, lng], 15); 
