@@ -224,6 +224,7 @@
                     s.open("GET", target)
 
                     s.onreadystatechange = function() {
+                        let prev = 0
                         if (this.readyState == 4 && this.status <= 399) {
                             datac = JSON.parse(this.response).destinations
                             datac.forEach(function(i) {
@@ -235,9 +236,9 @@
                                     mymap.setView([i.location.lat, i.location.lng], 19);
                                 })
                                 
-                                m.bindPopup("<h1>"+i.city + ", " + i.region+"</h1><h3>Population: "+i.population+"</h3><h3>Atleast "+i.presentsDelivered+" presents was delivered</h3><a href=\""+assisturl+"\">PassiveAssist</a>")
+                                m.bindPopup("<h1>"+i.city + ", " + i.region+"</h1><h3>Population: "+i.population+"</h3><h3>Atleast "+(i.presentsDelivered-prev)+" presents was delivered</h3><a href=\""+assisturl+"\">PassiveAssist</a>")
                                 m.addTo(data)
-                                
+                                prev = i.presentsDelivered
                             })
                         }
                     }
