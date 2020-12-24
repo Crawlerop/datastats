@@ -228,7 +228,7 @@
                         if (this.readyState == 4 && this.status <= 399) {
                             datac = JSON.parse(this.response.replace("addCZMLData(", "").replace(");", "")).slice(2,-1)
                             datac.forEach(function(i) {
-                            	iPos =  Cesium.Ellipsoid.WGS84.cartesianToCartographic(new Cesium.Cartesian3(i.position.cartesian[0],i.position.cartesian[1],i.position.cartesian[2]))
+                            	iPos = Cesium.Ellipsoid.WGS84.cartesianToCartographic(new Cesium.Cartesian3(i.position.cartesian[0],i.position.cartesian[1],i.position.cartesian[2]))
                             	iLat = Cesium.Math.toDegrees(iPos.latitude)
                             	iLng = Cesium.Math.toDegrees(iPos.longitude)
                             
