@@ -220,7 +220,8 @@
                     layers.addTo(mymap)	
 
                     var up = new URLSearchParams(window.location.search)
-                    var target = up.get("link") != null ? up.get("link") : "https://route.noradsanta.org/route20201222/67pppz.js" 
+                    //var target = up.get("link") != null ? up.get("link") : "https://route.noradsanta.org/route20201222/67pppz.js" 
+                    var target = up.get("link") != null ? up.get("link") : "https://crawlerop.github.io/psassist/norad2020.js" 
                     var s = new XMLHttpRequest()
                     s.open("GET", target)
 
