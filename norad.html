@@ -8,7 +8,7 @@
 
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" crossorigin=""/>
                 <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js" crossorigin=""></script>
-                <script src="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Cesium.js"></script>
+                <script src="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Cesium.js"></script>
                 <style>
                     body {
                         padding: 0;
@@ -221,7 +221,7 @@
 
                     var up = new URLSearchParams(window.location.search)
                     //var target = up.get("link") != null ? up.get("link") : "https://route.noradsanta.org/route20201222/67pppz.js" 
-                    var target = up.get("link") != null ? up.get("link") : "https://crawlerop.github.io/psassist/norad2020.js" 
+                    var target = up.get("link") != null ? up.get("link") : "https://crawlerop.github.io/psassist/norad2023.js" 
                     var s = new XMLHttpRequest()
                     s.open("GET", target)
 
